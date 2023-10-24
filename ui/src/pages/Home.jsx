@@ -6,6 +6,8 @@ const Home = () => {
     const [auth, setAuth] = useState(false)
     const [name, setName] = useState('')
     const [message, setMessage] = useState('')
+
+    axios.defaults.withCredentials = true
     useEffect(() => {
         axios.get('http://localhost:8080')
             .then(res => {
